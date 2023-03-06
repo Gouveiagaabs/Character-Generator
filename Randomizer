@@ -1,0 +1,103 @@
+import random
+
+def resultado(valor):
+        print(random.choice(valor))
+def race():
+    choose = random.choice(racas)
+    if choose == "Elfo":
+        print(random.choice(elfo))
+    elif choose == "Aasimar":
+        print(random.choice(aasimar))
+    elif choose == "Anão":
+        print(random.choice(anao))
+    elif choose == "Aviano":
+        print(random.choice(aviano))
+    elif choose == "Feral":
+        print(random.choice(feral))
+    elif choose == "Genasi":
+        print(random.choice(genasi))
+    elif choose == "Gnomo":
+        print(random.choice(gnomo))
+    elif choose == "Goblin":
+        print(random.choice(goblin))
+    elif choose == "Halfling":
+        print(random.choice(halfling))
+    elif choose == "Humano":
+        print(random.choice(humano))
+    elif choose == "Meio-Elfo":
+        print(random.choice(meioElfo))
+    elif choose == "Minotauro":
+        print(random.choice(minotauro))
+    elif choose == "Tiefling":
+        print(random.choice(tiefling))
+    elif choose == "Draconato":
+        print(random.choice(draconato))
+    elif choose == "Tritão":
+        print(random.choice(tritao))
+    else:
+        print(choose)
+
+racas = ["Aarakocra","Aasimar","Anão","Aviano","Bugbear","Draconato","Elfo",
+        "Etergênito","Feral","Firbolg","Forjado Bélico","Genasi","Gnomo","Goblin",
+        "Golias","Halfling",
+        "Hobglobin","Homem-Lagarto","Humano",
+        "Kenku","Khenra","Kobold","Kor","Meio-Elfo","Meio Orc",
+        "Minotauro","Naga","Orc","Replicante",
+        "Tabaxi","Tiefling","Tritão","Vampiro","Vedalken","Yuan-ti Puro Sangue",
+         "Leonin","Sátiro","Owlin","Fada","Eladrin","Githyanki","Githzerai",
+         "Haregon","Shadar'kai","Tortle","Kalashtar","Giff","Plasmoid","Loxodon"]
+elfo = ["Elfo da Floresta","Alto Elfo","Drow","Eladrin",
+        "Elfo de Kaladesh - Bishtahar","Elfo de Kaladesh - Tirahar",
+        "Elfo de Kaladesh - Vahadar","Elfo de Zendikar - Tajuru",
+        "Elfo de Zendikar - Joraga","Elfo de Zendikar - Mul Daya",]
+draconato = ["Draconato Azul","Draconato Branco","Draconato Bronze","Draconato Cobre","Draconato Latão",
+             "Draconato Negro","Draconato Ouro","Draconato Prata","Draconato Verde","Draconato Vermelho"]
+aasimar = ["Aasimar Protetor",
+        "Aasimar Flagelo","Aasimar Caído"]
+anao = ["Anão da Colina","Anão da Montanha","Anão Cinzento",
+        "Anão de Kaladesh"]
+aviano = ["Aviano Íbis","Aviano Falcão"]
+feral = ["Feral - Pele de Besta","Feral - Caminhar no Penhasco",
+        "Feral - Passo Largo","Feral - Dente Longo","Feral - Garra de Navalha",
+        "Feral - Caçador Selvagem"]
+genasi = ["Genasi do Ar",
+        "Genasi do Fogo","Genasi da Terra","Genasi da Água"]
+gnomo = ["Gnomo da Floresta",
+        "Gnomo das rochas","Gnomo das profundezas"]
+goblin = ["Goblin",
+        "Goblin de Zendikar - Grotag","Goblin de Zendikar - Lavastep","Goblin de Zendikar - TukTuk"]
+halfling = ["Halfling Pés-leves","Halfling Coração Valente","Halfling Fantasma"]
+humano = ["Humano de Innistrad - Gavony",
+        "Humano de Innistrad - Kessig","Humano de Innistrad - Nephalia","Humano de Innistrad - Stensia"]
+meioElfo = ["Meio Elfo - Floresta",
+        "Meio Elfo - Alto","Meio Elfo - Drow","Meio Elfo - Áquático"]
+minotauro = ["Minotauro de Amonketh","Minotauro de Krynn"]
+tiefling = ["Tiefling Infernal","Tiefling Abissal"]
+tritao = ["Tritão","Tritão de Zendikar - Emeria",
+        "Tritão de Zendikar - Ula","Tritão de Zendikar - Cosi"]
+classes = ["Bárbaro","Bardo","Bruxo","Clérigo","Druida",
+           "Feiticeiro","Guerreiro","Ladino","Mago","Monge",
+           "Paladino","Patrulheiro","Ártifice","Caçador de Sangue"]
+genero = ["Masculino","Feminino","Não-Binário","Gênero Flúido"]
+alinhamento = ["Leal Bom","Neutro Bom",
+               "Caótico Bom","Leal neutro",
+               "Neutro","Caótico Neutro",
+               "Leal mal","Neutro Mal","Caótico Mal"]
+antecendente = ["Acólito","Artesão de Guilda","Artista",
+                "Charlatão","Criminoso","Eremita","Forasteiro","Herói do povo",
+                "Marinheiro","Nobre","Órfão","Sábio","Soldado"]
+d6 = [1,2,3,4,5,6]
+dadosEscolhidos = []
+for num in range(6):
+        resultadod6 = []
+        for index in range(4):
+                resultadod6.append(random.choice(d6))
+        resultadod6.remove(min(resultadod6))
+        soma = sum(resultadod6)
+        dadosEscolhidos.append(soma)
+race()
+resultado(classes)
+resultado(genero)
+resultado(alinhamento)
+resultado(antecendente)
+print(dadosEscolhidos)
