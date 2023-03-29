@@ -36,7 +36,70 @@ def race():
         print(random.choice(tritao))
     else:
         print(choose)
-
+def arquetipo(classe):
+    choose2 = escolhaClasses
+    choose3 = ""
+    if choose2 == "Bárbaro":
+        choose3 = random.choice(espec[0])
+        print("- " + (choose3))
+        if choose3 == "Caminho do Guerreiro Totêmico":
+            print("- " + (random.choice(hab[0])))
+    elif choose2 == "Bardo":
+        choose3 = random.choice(espec[1])
+        print("- " + (choose3))
+    elif choose2 == "Bruxo":
+        choose3 = random.choice(espec[2])
+        print("- " + (choose3))
+        print("- " + (random.choice(hab[1])))
+    elif choose2 == "Clérigo":
+        choose3 = random.choice(espec[3])
+        print("- " + (choose3))
+    elif choose2 == "Druida":
+        choose3 = random.choice(espec[4])
+        print("- " + (choose3))
+    elif choose2 == "Feiticeiro":
+        choose3 = random.choice(espec[5])
+        print("- " + (choose3))
+        if choose3 == "Linhagem Dracônica":
+            print("- " + (random.choice(hab[2])))
+    elif choose2 == "Guerreiro":
+        choose3 = random.choice(espec[6])
+        print("- " + (choose3))
+        print("- " + (random.choice(hab[3])))
+    elif choose2 == "Ladino":
+        choose3 = random.choice(espec[7])
+        print("- " + (choose3))
+    elif choose2 == "Mago":
+        choose3 = random.choice(espec[8])
+        print("- " + (choose3))
+    elif choose2 == "Monge":
+        choose3 = random.choice(espec[9])
+        print("- " + (choose3))
+    elif choose2 == "Paladino":
+        choose3 = random.choice(espec[10])
+        print("- " + (choose3))
+        print("- " + (random.choice(hab[4])))
+    elif choose2 == "Patrulheiro":
+        choose3 = random.choice(espec[11])
+        print("- " + (choose3))
+        print("- " + (random.choice(hab[5])))
+        print("- " + (random.choice(hab[6])))
+        if choose3 == "Conclave da Besta":
+            print("- " + (random.choice(hab[7])))
+        elif choose3 == "Conclave do Caçador":
+            print("- " + (random.choice(hab[8])))
+    elif choose2 == "Ártifice":
+        choose3 = random.choice(espec[12])
+        print("- " + (choose3))
+    elif choose2 == "Caçador de Sangue":
+        choose3 = random.choice(espec[13])
+        print("- " + (choose3))
+        print("- " + (random.choice(hab[9])))
+        print("- " + (random.choice(hab[10])))
+        if choose3 == "Ordem do Licantropo":
+            print("- " + (random.choice(hab[11])))
+        elif choose3 == "Ordem da Alma Profana":
+            print("- " + (random.choice(hab[12])))
 racas = ["Aarakocra","Aasimar","Anão","Aviano","Bugbear","Draconato","Elfo",
         "Etergênito","Feral","Firbolg","Forjado Bélico","Genasi","Gnomo","Goblin",
         "Golias","Halfling",
@@ -87,8 +150,23 @@ espec = [["Caminho do Furioso", "Caminho do Guerreiro Totêmico"], ["Colégio do
             "Escola de Conjuração", "Escola de Encantamento", "Escola de Evocação", "Escola de Ilusão",
             "Escola de Necromancia", "Escola de Transmutação"],["Caminho da mão aberta", "Caminho da Sombra",
             "Caminho dos Quatro elementos"], ["Juramento de Devoção", "Juramento dos Anciões", "Juramento da Vingança"],
-            ["Conclave da Besta", "Conclave do Caçador", "Conclave do Rastreador Subterrâneo"], ["Alquimista", "Armeiro"],
+            ["Conclave da Besta", "Conclave do Caçador", "Conclave do Rastreador Subterrâneo"], ["Alquimista", "Armeiro", "Artilheiro", "Ferreiro"],
             ["Ordem dos Caçadores de Espectro", "Ordem do Licantropo", "Ordem do Mutante", "Ordem da Alma profana"]]
+hab = [["Totem da Águia", "Totem do Lobo", "Totem do Urso"], ["Pacto da Corrente", "Pacto da Lâmina", "Pacto do tomo"],
+       ["Linhagem Azul", "Linhagem Branco", "Linhagem Bronze", "Linhagem Cobre", "Linhagem Latão",
+        "Linhagem Negro", "Linhagem Ouro", "Linhagem Prata", "Linhagem Verde", "Linhagem Vermelho"],
+       ["Estilo de Luta: Arquearia", "Estilo de luta: Combate com Armas Grandes", "Estilo de Luta: Combate com Duas Armas",
+       "Estilo de luta: Defesa", "Estilo de luta: Duelismo", "Estilo de luta: Proteção"], ["Estilo de luta: Combate com Armas Grandes",
+        "Estilo de luta: Defesa", "Estilo de luta: Duelismo", "Estilo de luta: Proteção"],
+       ["Inimigo Favorito: Bestas", "Inimigo Favorito: Fadas", "Inimigo Favorito: Humanoide", "Inimigo Favorito: Monstruosidades",
+        "Inimigo Favorito: Mortos-Vivos"], ["Estilo de luta: Arquearia", "Estilo de luta: Combate com Duas Armas",
+        "Estilo de luta: Defesa", "Estilo de Luta: Duelismo"], ["Companheiro Animal: Arminho Gigante",
+        "Companheiro Animal: Javali", "Companheiro Animal: Gorila", "Companheiro Animal: Lobo", "Companheiro Animal: Mula",
+        "Companheiro Animal: Pantera", "Companheiro Animal: Texugo Gigante", "Companheiro Animal: Urso Negro"],
+       ["Assassino de Colossos", "Matador de Gigantes", "Destruidor de Hordas"], ["Ritual das Chamas", "Ritual do Congelamento", "Ritual da Tempestade"],
+       ["Estilo de Luta: Arquearia", "Estilo de luta: Duelismo", "Estilo de luta: Combate com armas grandes", "Estilo de luta: Combate com duas armas"],
+       ["Forma de Lobo", "Forma de Urso", "Forma de Tigre", "Forma de Javali", "Forma de Rato"], ["Pacto com A Arquifada",
+        "Pacto com O Corruptor", "Pacto com O Grande Antigo", "Pacto com O Imortal", "Pacto com O Celestial", "Pacto com O Hexblade"]]
 genero = ["Masculino","Feminino","Não-Binário","Gênero Flúido"]
 alinhamento = ["Leal Bom","Neutro Bom",
                "Caótico Bom","Leal neutro",
@@ -97,6 +175,7 @@ alinhamento = ["Leal Bom","Neutro Bom",
 antecendente = ["Acólito","Artesão de Guilda","Artista",
                 "Charlatão","Criminoso","Eremita","Forasteiro","Herói do povo",
                 "Marinheiro","Nobre","Órfão","Sábio","Soldado"]
+escolhaClasses = random.choice(classes)
 d6 = [1,2,3,4,5,6]
 dadosEscolhidos = []
 for num in range(6):
@@ -114,8 +193,8 @@ def printdado():
     print("Sabedoria = " + str(dadosEscolhidos[4]))
     print("Carisma = " + str(dadosEscolhidos[5]))
 race()
-resultado(classes)
-resultado(espec)
+print(escolhaClasses)
+arquetipo(escolhaClasses)
 resultado(genero)
 resultado(alinhamento)
 resultado(antecendente)
