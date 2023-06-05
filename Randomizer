@@ -1,5 +1,235 @@
 import random
 
+nomes_masculinos = [
+    "Aldric",
+    "Bran",
+    "Cedric",
+    "Dorian",
+    "Eldon",
+    "Finn",
+    "Gareth",
+    "Hadrian",
+    "Ivan",
+    "Jareth",
+    "Kael",
+    "Landon",
+    "Marius",
+    "Nolan",
+    "Orin",
+    "Percival",
+    "Quentin",
+    "Roland",
+    "Sebastian",
+    "Thorin",
+    "Ulysses",
+    "Valerian",
+    "Wesley",
+    "Xander",
+    "Yorick",
+    "Zephyr",
+    "Alaric",
+    "Brom",
+    "Cassius",
+    "Darius",
+    "Eamon",
+    "Felix",
+    "Gideon",
+    "Hawke",
+    "Isidore",
+    "Jasper",
+    "Kieran",
+    "Lysander",
+    "Malachi",
+    "Nathaniel",
+    "Oliver",
+    "Percy",
+    "Quincy",
+    "Roderick",
+    "Silas",
+    "Theodore",
+    "Uriah",
+    "Vance",
+    "Wilder",
+    "Xavier",
+    "Yannick",
+    "Zander",
+    "Alistair",
+    "Benedict",
+    "Caspian",
+    "Darian",
+    "Ezekiel",
+    "Finnegan",
+    "Gavin",
+    "Hector",
+    "Ignatius",
+    "Julian",
+    "Kellan",
+    "Leander",
+    "Matthias",
+    "Nigel",
+    "Orlando",
+    "Preston",
+    "Quillan",
+    "Raphael",
+    "Stellan",
+    "Tobias",
+    "Ulric",
+    "Victor",
+    "Winston",
+    "Xeno",
+    "Yorath",
+    "Zephyrus",
+    "Alastair",
+    "Bastian",
+    "Cyrus",
+    "Damon",
+    "Ethan",
+    "Fabian",
+    "Gideon",
+    "Hayden",
+    "Isaac",
+    "Jared",
+    "Keegan",
+    "Lucian",
+    "Maxwell",
+    "Nero",
+    "Oscar",
+    "Pierce",
+    "Quentin",
+    "Ryder",
+    "Soren",
+    "Talon",
+    "Uriel",
+    "Vincent",
+    "Wyatt",
+    "Xander",
+    "Yuri",
+    "Zephyrus"
+]
+# Remove os itens duplicados mantendo a ordem de aparição
+lista_sem_duplicatasm = []
+itens_removidos = []
+
+for item in nomes_masculinos:
+    if item not in lista_sem_duplicatasm:
+        lista_sem_duplicatasm.append(item)
+    else:
+        itens_removidos.append(item)
+nomes_femininos = [
+    "Aria",
+    "Brienne",
+    "Cassandra",
+    "Dahlia",
+    "Evelyn",
+    "Fiona",
+    "Gwendolyn",
+    "Hazel",
+    "Iris",
+    "Jasmine",
+    "Kira",
+    "Luna",
+    "Maeve",
+    "Nora",
+    "Olivia",
+    "Penelope",
+    "Quinn",
+    "Rosalind",
+    "Seraphina",
+    "Thea",
+    "Uma",
+    "Violet",
+    "Willow",
+    "Xanthe",
+    "Yara",
+    "Zara",
+    "Adelaide",
+    "Bianca",
+    "Cecilia",
+    "Delilah",
+    "Elara",
+    "Felicity",
+    "Giselle",
+    "Hannah",
+    "Isabella",
+    "Juliet",
+    "Keira",
+    "Lorelei",
+    "Mira",
+    "Natalie",
+    "Ophelia",
+    "Persephone",
+    "Quincy",
+    "Rhiannon",
+    "Selene",
+    "Tessa",
+    "Ursula",
+    "Vivienne",
+    "Willa",
+    "Xena",
+    "Yasmine",
+    "Zelda",
+    "Amara",
+    "Beatrice",
+    "Cora",
+    "Daisy",
+    "Elena",
+    "Freya",
+    "Genevieve",
+    "Holly",
+    "Imogen",
+    "Josephine",
+    "Katherine",
+    "Lydia",
+    "Mabel",
+    "Nova",
+    "Olive",
+    "Piper",
+    "Quintessa",
+    "Rose",
+    "Stella",
+    "Tabitha",
+    "Una",
+    "Valentina",
+    "Wren",
+    "Xiomara",
+    "Yvonne",
+    "Zara",
+    "Aurora",
+    "Belle",
+    "Clara",
+    "Diana",
+    "Eleanor",
+    "Fiona",
+    "Grace",
+    "Hazel",
+    "Ivy",
+    "Jade",
+    "Kylie",
+    "Lily",
+    "Mila",
+    "Nina",
+    "Olivia",
+    "Poppy",
+    "Queenie",
+    "Ruby",
+    "Sophia",
+    "Talia",
+    "Ursula",
+    "Violet",
+    "Willa",
+    "Xara",
+    "Yara",
+    "Zoe"
+]
+# Remove os itens duplicados mantendo a ordem de aparição
+lista_sem_duplicatasf = []
+itens_removidos = []
+
+for item in nomes_femininos:
+    if item not in lista_sem_duplicatasf:
+        lista_sem_duplicatasf.append(item)
+    else:
+        itens_removidos.append(item)
 def resultado(valor):
         print(random.choice(valor))
 def race():
@@ -193,10 +423,20 @@ def printdado():
     print("Inteligência = " + str(dadosEscolhidos[3]))
     print("Sabedoria = " + str(dadosEscolhidos[4]))
     print("Carisma = " + str(dadosEscolhidos[5]))
+gender = random.choice(genero)
+misturegender = []
+if gender == "Masculino":
+    resultado(lista_sem_duplicatasm)
+elif gender == "Feminino":
+    resultado(lista_sem_duplicatasf)
+elif gender == "Não-Binário" or gender == "Gênero Flúido":
+    misturegender.append(random.choice(lista_sem_duplicatasf))
+    misturegender.append(random.choice(lista_sem_duplicatasm))
+    resultado(misturegender)
 race()
 print(escolhaClasses)
 arquetipo(escolhaClasses)
-resultado(genero)
+print(gender)
 resultado(alinhamento)
 resultado(antecendente)
 print("============================")
