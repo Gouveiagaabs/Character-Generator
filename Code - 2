@@ -1,0 +1,443 @@
+import random
+
+nomes_masculinos = [
+    "Aldric",
+    "Bran",
+    "Cedric",
+    "Dorian",
+    "Eldon",
+    "Finn",
+    "Gareth",
+    "Hadrian",
+    "Ivan",
+    "Jareth",
+    "Kael",
+    "Landon",
+    "Marius",
+    "Nolan",
+    "Orin",
+    "Percival",
+    "Quentin",
+    "Roland",
+    "Sebastian",
+    "Thorin",
+    "Ulysses",
+    "Valerian",
+    "Wesley",
+    "Xander",
+    "Yorick",
+    "Zephyr",
+    "Alaric",
+    "Brom",
+    "Cassius",
+    "Darius",
+    "Eamon",
+    "Felix",
+    "Gideon",
+    "Hawke",
+    "Isidore",
+    "Jasper",
+    "Kieran",
+    "Lysander",
+    "Malachi",
+    "Nathaniel",
+    "Oliver",
+    "Percy",
+    "Quincy",
+    "Roderick",
+    "Silas",
+    "Theodore",
+    "Uriah",
+    "Vance",
+    "Wilder",
+    "Xavier",
+    "Yannick",
+    "Zander",
+    "Alistair",
+    "Benedict",
+    "Caspian",
+    "Darian",
+    "Ezekiel",
+    "Finnegan",
+    "Gavin",
+    "Hector",
+    "Ignatius",
+    "Julian",
+    "Kellan",
+    "Leander",
+    "Matthias",
+    "Nigel",
+    "Orlando",
+    "Preston",
+    "Quillan",
+    "Raphael",
+    "Stellan",
+    "Tobias",
+    "Ulric",
+    "Victor",
+    "Winston",
+    "Xeno",
+    "Yorath",
+    "Zephyrus",
+    "Alastair",
+    "Bastian",
+    "Cyrus",
+    "Damon",
+    "Ethan",
+    "Fabian",
+    "Gideon",
+    "Hayden",
+    "Isaac",
+    "Jared",
+    "Keegan",
+    "Lucian",
+    "Maxwell",
+    "Nero",
+    "Oscar",
+    "Pierce",
+    "Quentin",
+    "Ryder",
+    "Soren",
+    "Talon",
+    "Uriel",
+    "Vincent",
+    "Wyatt",
+    "Xander",
+    "Yuri",
+    "Zephyrus"
+]
+# Remove os itens duplicados mantendo a ordem de aparição
+lista_sem_duplicatasm = []
+itens_removidos = []
+
+for item in nomes_masculinos:
+    if item not in lista_sem_duplicatasm:
+        lista_sem_duplicatasm.append(item)
+    else:
+        itens_removidos.append(item)
+nomes_femininos = [
+    "Aria",
+    "Brienne",
+    "Cassandra",
+    "Dahlia",
+    "Evelyn",
+    "Fiona",
+    "Gwendolyn",
+    "Hazel",
+    "Iris",
+    "Jasmine",
+    "Kira",
+    "Luna",
+    "Maeve",
+    "Nora",
+    "Olivia",
+    "Penelope",
+    "Quinn",
+    "Rosalind",
+    "Seraphina",
+    "Thea",
+    "Uma",
+    "Violet",
+    "Willow",
+    "Xanthe",
+    "Yara",
+    "Zara",
+    "Adelaide",
+    "Bianca",
+    "Cecilia",
+    "Delilah",
+    "Elara",
+    "Felicity",
+    "Giselle",
+    "Hannah",
+    "Isabella",
+    "Juliet",
+    "Keira",
+    "Lorelei",
+    "Mira",
+    "Natalie",
+    "Ophelia",
+    "Persephone",
+    "Quincy",
+    "Rhiannon",
+    "Selene",
+    "Tessa",
+    "Ursula",
+    "Vivienne",
+    "Willa",
+    "Xena",
+    "Yasmine",
+    "Zelda",
+    "Amara",
+    "Beatrice",
+    "Cora",
+    "Daisy",
+    "Elena",
+    "Freya",
+    "Genevieve",
+    "Holly",
+    "Imogen",
+    "Josephine",
+    "Katherine",
+    "Lydia",
+    "Mabel",
+    "Nova",
+    "Olive",
+    "Piper",
+    "Quintessa",
+    "Rose",
+    "Stella",
+    "Tabitha",
+    "Una",
+    "Valentina",
+    "Wren",
+    "Xiomara",
+    "Yvonne",
+    "Zara",
+    "Aurora",
+    "Belle",
+    "Clara",
+    "Diana",
+    "Eleanor",
+    "Fiona",
+    "Grace",
+    "Hazel",
+    "Ivy",
+    "Jade",
+    "Kylie",
+    "Lily",
+    "Mila",
+    "Nina",
+    "Olivia",
+    "Poppy",
+    "Queenie",
+    "Ruby",
+    "Sophia",
+    "Talia",
+    "Ursula",
+    "Violet",
+    "Willa",
+    "Xara",
+    "Yara",
+    "Zoe"
+]
+# Remove os itens duplicados mantendo a ordem de aparição
+lista_sem_duplicatasf = []
+itens_removidos = []
+
+for item in nomes_femininos:
+    if item not in lista_sem_duplicatasf:
+        lista_sem_duplicatasf.append(item)
+    else:
+        itens_removidos.append(item)
+def resultado(valor):
+        print(random.choice(valor))
+def race():
+    choose = random.choice(racas)
+    if choose == "Elfo":
+        print(random.choice(elfo))
+    elif choose == "Aasimar":
+        print(random.choice(aasimar))
+    elif choose == "Anão":
+        print(random.choice(anao))
+    elif choose == "Aviano":
+        print(random.choice(aviano))
+    elif choose == "Feral":
+        print(random.choice(feral))
+    elif choose == "Genasi":
+        print(random.choice(genasi))
+    elif choose == "Gnomo":
+        print(random.choice(gnomo))
+    elif choose == "Goblin":
+        print(random.choice(goblin))
+    elif choose == "Halfling":
+        print(random.choice(halfling))
+    elif choose == "Humano":
+        print(random.choice(humano))
+    elif choose == "Meio-Elfo":
+        print(random.choice(meioElfo))
+    elif choose == "Minotauro":
+        print(random.choice(minotauro))
+    elif choose == "Tiefling":
+        print(random.choice(tiefling))
+    elif choose == "Draconato":
+        print(random.choice(draconato))
+    elif choose == "Tritão":
+        print(random.choice(tritao))
+    else:
+        print(choose)
+def arquetipo(classe):
+    choose2 = escolhaClasses
+    choose3 = ""
+    if choose2 == "Bárbaro":
+        choose3 = random.choice(espec[0])
+        print("- " + (choose3))
+        if choose3 == "Caminho do Guerreiro Totêmico":
+            print("- " + (random.choice(hab[0])))
+    elif choose2 == "Bardo":
+        choose3 = random.choice(espec[1])
+        print("- " + (choose3))
+    elif choose2 == "Bruxo":
+        choose3 = random.choice(espec[2])
+        print("- " + (choose3))
+        print("- " + (random.choice(hab[1])))
+    elif choose2 == "Clérigo":
+        choose3 = random.choice(espec[3])
+        print("- " + (choose3))
+    elif choose2 == "Druida":
+        choose3 = random.choice(espec[4])
+        print("- " + (choose3))
+    elif choose2 == "Feiticeiro":
+        choose3 = random.choice(espec[5])
+        print("- " + (choose3))
+        if choose3 == "Linhagem Dracônica":
+            print("- " + (random.choice(hab[2])))
+    elif choose2 == "Guerreiro":
+        choose3 = random.choice(espec[6])
+        print("- " + (choose3))
+        print("- " + (random.choice(hab[3])))
+    elif choose2 == "Ladino":
+        choose3 = random.choice(espec[7])
+        print("- " + (choose3))
+    elif choose2 == "Mago":
+        choose3 = random.choice(espec[8])
+        print("- " + (choose3))
+    elif choose2 == "Monge":
+        choose3 = random.choice(espec[9])
+        print("- " + (choose3))
+    elif choose2 == "Paladino":
+        choose3 = random.choice(espec[10])
+        print("- " + (choose3))
+        print("- " + (random.choice(hab[4])))
+    elif choose2 == "Patrulheiro":
+        choose3 = random.choice(espec[11])
+        print("- " + (choose3))
+        print("- " + (random.choice(hab[5])))
+        print("- " + (random.choice(hab[6])))
+        if choose3 == "Conclave da Besta":
+            print("- " + (random.choice(hab[7])))
+        elif choose3 == "Conclave do Caçador":
+            print("- " + (random.choice(hab[8])))
+    elif choose2 == "Ártifice":
+        choose3 = random.choice(espec[12])
+        print("- " + (choose3))
+    elif choose2 == "Caçador de Sangue":
+        choose3 = random.choice(espec[13])
+        print("- " + (choose3))
+        print("- " + (random.choice(hab[9])))
+        print("- " + (random.choice(hab[10])))
+        if choose3 == "Ordem do Licantropo":
+            print("- " + (random.choice(hab[11])))
+        elif choose3 == "Ordem da Alma Profana":
+            print("- " + (random.choice(hab[12])))
+racas = ["Aarakocra","Aasimar","Anão","Aviano","Bugbear","Draconato","Elfo",
+        "Etergênito","Feral","Firbolg","Forjado Bélico","Genasi","Gnomo","Goblin",
+        "Golias","Halfling",
+        "Hobglobin","Homem-Lagarto","Humano",
+        "Kenku","Khenra","Kobold","Kor","Meio-Elfo","Meio Orc",
+        "Minotauro","Naga","Orc","Replicante",
+        "Tabaxi","Tiefling","Tritão","Vampiro","Vedalken","Yuan-ti Puro Sangue",
+         "Leonin","Sátiro","Owlin","Fada","Eladrin","Githyanki","Githzerai",
+         "Haregon","Shadar'kai","Tortle","Kalashtar","Giff","Plasmoid","Loxodon"]
+elfo = ["Elfo da Floresta","Alto Elfo","Drow","Eladrin",
+        "Elfo de Kaladesh - Bishtahar","Elfo de Kaladesh - Tirahar",
+        "Elfo de Kaladesh - Vahadar","Elfo de Zendikar - Tajuru",
+        "Elfo de Zendikar - Joraga","Elfo de Zendikar - Mul Daya",]
+draconato = ["Draconato Azul","Draconato Branco","Draconato Bronze","Draconato Cobre","Draconato Latão",
+             "Draconato Negro","Draconato Ouro","Draconato Prata","Draconato Verde","Draconato Vermelho"]
+aasimar = ["Aasimar Protetor",
+        "Aasimar Flagelo","Aasimar Caído"]
+anao = ["Anão da Colina","Anão da Montanha","Anão Cinzento",
+        "Anão de Kaladesh"]
+aviano = ["Aviano Íbis","Aviano Falcão"]
+feral = ["Feral - Pele de Besta","Feral - Caminhar no Penhasco",
+        "Feral - Passo Largo","Feral - Dente Longo","Feral - Garra de Navalha",
+        "Feral - Caçador Selvagem"]
+genasi = ["Genasi do Ar",
+        "Genasi do Fogo","Genasi da Terra","Genasi da Água"]
+gnomo = ["Gnomo da Floresta",
+        "Gnomo das rochas","Gnomo das profundezas"]
+goblin = ["Goblin",
+        "Goblin de Zendikar - Grotag","Goblin de Zendikar - Lavastep","Goblin de Zendikar - TukTuk"]
+halfling = ["Halfling Pés-leves","Halfling Coração Valente","Halfling Fantasma"]
+humano = ["Humano de Innistrad - Gavony",
+        "Humano de Innistrad - Kessig","Humano de Innistrad - Nephalia","Humano de Innistrad - Stensia"]
+meioElfo = ["Meio Elfo - Floresta",
+        "Meio Elfo - Alto","Meio Elfo - Drow","Meio Elfo - Áquático"]
+minotauro = ["Minotauro de Amonketh","Minotauro de Krynn"]
+tiefling = ["Tiefling Infernal","Tiefling Abissal"]
+tritao = ["Tritão","Tritão de Zendikar - Emeria",
+        "Tritão de Zendikar - Ula","Tritão de Zendikar - Cosi"]
+classes = ["Bárbaro","Bardo","Bruxo","Clérigo","Druida",
+           "Feiticeiro","Guerreiro","Ladino","Mago","Monge",
+           "Paladino","Patrulheiro","Ártifice","Caçador de Sangue"]
+espec = [["Caminho do Furioso", "Caminho do Guerreiro Totêmico"], ["Colégio do Conhecimento",
+            "Colégio da Bravura"], ["Patrono: A Arquifada", "Patrono: O Corruptor", "Patrono: O Grande Antigo",
+            "Patrono: O Imortal", "Patrono: O Celestial", "Patrono: O Hexblade"],
+         ["Domínio do Conhecimento", "Domínio da Enganação", "Domínio da Guerra", "Domínio da luz",
+          "Domínio da Natureza", "Domínio da Tempestade", "Domínio da vida"], ["Círculo da Terra", "Círculo da Lua"],
+         ["Linhagem Dracônica", "Magia Selvagem"], ["Campeão", "Cavaleiro Arcano", "Mestre de Batalha"],
+         ["Assassino", "Ladrão", "Trapaceiro Arcano"], ["Escola de Abjuração", "Escola de Advinhação",
+            "Escola de Conjuração", "Escola de Encantamento", "Escola de Evocação", "Escola de Ilusão",
+            "Escola de Necromancia", "Escola de Transmutação"],["Caminho da mão aberta", "Caminho da Sombra",
+            "Caminho dos Quatro elementos"], ["Juramento de Devoção", "Juramento dos Anciões", "Juramento da Vingança"],
+            ["Conclave da Besta", "Conclave do Caçador", "Conclave do Rastreador Subterrâneo"], ["Alquimista", "Armeiro", "Artilheiro", "Ferreiro"],
+            ["Ordem dos Caçadores de Espectro", "Ordem do Licantropo", "Ordem do Mutante", "Ordem da Alma profana"]]
+hab = [["Totem da Águia", "Totem do Lobo", "Totem do Urso"], ["Pacto da Corrente", "Pacto da Lâmina", "Pacto do tomo"],
+       ["Linhagem Azul", "Linhagem Branco", "Linhagem Bronze", "Linhagem Cobre", "Linhagem Latão",
+        "Linhagem Negro", "Linhagem Ouro", "Linhagem Prata", "Linhagem Verde", "Linhagem Vermelho"],
+       ["Estilo de Luta: Arquearia", "Estilo de luta: Combate com Armas Grandes", "Estilo de Luta: Combate com Duas Armas",
+       "Estilo de luta: Defesa", "Estilo de luta: Duelismo", "Estilo de luta: Proteção"], ["Estilo de luta: Combate com Armas Grandes",
+        "Estilo de luta: Defesa", "Estilo de luta: Duelismo", "Estilo de luta: Proteção"],
+       ["Inimigo Favorito: Bestas", "Inimigo Favorito: Fadas", "Inimigo Favorito: Humanoide", "Inimigo Favorito: Monstruosidades",
+        "Inimigo Favorito: Mortos-Vivos"], ["Estilo de luta: Arquearia", "Estilo de luta: Combate com Duas Armas",
+        "Estilo de luta: Defesa", "Estilo de Luta: Duelismo"], ["Companheiro Animal: Arminho Gigante",
+        "Companheiro Animal: Javali", "Companheiro Animal: Gorila", "Companheiro Animal: Lobo", "Companheiro Animal: Mula",
+        "Companheiro Animal: Pantera", "Companheiro Animal: Texugo Gigante", "Companheiro Animal: Urso Negro"],
+       ["Assassino de Colossos", "Matador de Gigantes", "Destruidor de Hordas"], ["Ritual das Chamas", "Ritual do Congelamento", "Ritual da Tempestade"],
+       ["Estilo de Luta: Arquearia", "Estilo de luta: Duelismo", "Estilo de luta: Combate com armas grandes", "Estilo de luta: Combate com duas armas"],
+       ["Forma de Lobo", "Forma de Urso", "Forma de Tigre", "Forma de Javali", "Forma de Rato"], ["Pacto com A Arquifada",
+        "Pacto com O Corruptor", "Pacto com O Grande Antigo", "Pacto com O Imortal", "Pacto com O Celestial", "Pacto com O Hexblade"]]
+genero = ["Masculino","Feminino"]
+alinhamento = ["Leal Bom","Neutro Bom",
+               "Caótico Bom","Leal neutro",
+               "Neutro","Caótico Neutro",
+               "Leal mal","Neutro Mal","Caótico Mal"]
+antecendente = ["Acólito","Artesão de Guilda","Artista",
+                "Charlatão","Criminoso","Eremita","Forasteiro","Herói do povo",
+                "Marinheiro","Nobre","Órfão","Sábio","Soldado"]
+escolhaClasses = random.choice(classes)
+d6 = [1,2,3,4,5,6]
+dadosEscolhidos = []
+for num in range(6):
+        resultadod6 = []
+        for index in range(4):
+                resultadod6.append(random.choice(d6))
+        resultadod6.remove(min(resultadod6))
+        soma = sum(resultadod6)
+        dadosEscolhidos.append(soma)
+def printdado():
+    print("Força = " + str(dadosEscolhidos[0]))
+    print("Destreza = " + str(dadosEscolhidos[1]))
+    print("Constituição = " +str(dadosEscolhidos[2]))
+    print("Inteligência = " + str(dadosEscolhidos[3]))
+    print("Sabedoria = " + str(dadosEscolhidos[4]))
+    print("Carisma = " + str(dadosEscolhidos[5]))
+gender = random.choice(genero)
+misturegender = []
+if gender == "Masculino":
+    resultado(lista_sem_duplicatasm)
+elif gender == "Feminino":
+    resultado(lista_sem_duplicatasf)
+elif gender == "Não-Binário" or gender == "Gênero Flúido":
+    misturegender.append(random.choice(lista_sem_duplicatasf))
+    misturegender.append(random.choice(lista_sem_duplicatasm))
+    resultado(misturegender)
+race()
+print(escolhaClasses)
+arquetipo(escolhaClasses)
+print(gender)
+resultado(alinhamento)
+resultado(antecendente)
+print("============================")
+printdado()
